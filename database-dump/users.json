@@ -1,0 +1,62 @@
+[
+  {
+    "_id": "6a424ccb43985545cd94ac77",
+    "name": "Admin",
+    "email": "admin@ideamagix.com",
+    "password": "$2a$10$5ib2E4NXxophmBQX6iGEoeFpxBBC/0.bGJGefZail34cIdpvEeea2",
+    "role": "admin",
+    "createdAt": "2026-06-29T10:45:31.333Z",
+    "updatedAt": "2026-06-29T10:45:31.333Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a424ccb43985545cd94ac7b",
+    "name": "Priya Mehta",
+    "email": "priya@ideamagix.com",
+    "password": "$2a$10$3W9aKevFs6Be9OT.FbTqJenTA0cm1iBVK0QZZkghnDOulnOEdaLz2",
+    "role": "instructor",
+    "createdAt": "2026-06-29T10:45:31.426Z",
+    "updatedAt": "2026-06-29T10:45:31.426Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a424ccb43985545cd94ac7a",
+    "name": "Rahul Sharma",
+    "email": "rahul@ideamagix.com",
+    "password": "$2a$10$qq2.FZhUI8CPC9WLwgH0RegdSaw6D2d/GnhJxGgu.XiXd9S3wT.fS",
+    "role": "instructor",
+    "createdAt": "2026-06-29T10:45:31.426Z",
+    "updatedAt": "2026-06-29T10:45:31.426Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a4268fab6dc00f8d8dc4785",
+    "name": "juhi chawla",
+    "email": "juhichawla12@gmail.com",
+    "password": "$2a$10$/jVyDPAHMSPKdnEmLZI9zulfqIFBh.n8pu2ScZTjwFX6H1GDgYuFu",
+    "role": "instructor",
+    "createdAt": "2026-06-29T12:45:46.882Z",
+    "updatedAt": "2026-06-29T12:45:46.882Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a429a67362bc4bc3bbf8827",
+    "name": "simran talreja",
+    "email": "simran@gmail.com",
+    "password": "$2a$10$5nojn1fKyiYWGzAO8o2nK.sUIm.0lBUHZfYXAdYK/3PpIyKXzdehi",
+    "role": "instructor",
+    "createdAt": "2026-06-29T16:16:39.021Z",
+    "updatedAt": "2026-06-29T16:16:39.021Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a429cea362bc4bc3bbf88c6",
+    "name": "muskan sawlani",
+    "email": "muskan@gmail.com",
+    "password": "$2a$10$DbjXIYrbY6JW0AKUnxgsNO1Ei5y23KEWsqjkP5jf/ELFh9z6iCdKW",
+    "role": "instructor",
+    "createdAt": "2026-06-29T16:27:22.919Z",
+    "updatedAt": "2026-06-29T16:27:22.919Z",
+    "__v": 0
+  }
+]

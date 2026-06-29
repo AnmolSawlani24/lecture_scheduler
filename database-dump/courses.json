@@ -1,0 +1,131 @@
+[
+  {
+    "_id": "6a424ccb43985545cd94ac7e",
+    "name": "Web Development Bootcamp",
+    "level": "Beginner",
+    "description": "Learn HTML, CSS, JavaScript from scratch",
+    "batches": [
+      {
+        "batchName": "Batch A - Morning",
+        "_id": "6a424ccb43985545cd94ac7f",
+        "createdAt": "2026-06-29T10:45:31.565Z",
+        "updatedAt": "2026-06-29T10:45:31.565Z"
+      },
+      {
+        "batchName": "Batch B - Evening",
+        "_id": "6a424ccb43985545cd94ac80",
+        "createdAt": "2026-06-29T10:45:31.565Z",
+        "updatedAt": "2026-06-29T10:45:31.565Z"
+      }
+    ],
+    "createdAt": "2026-06-29T10:45:31.566Z",
+    "updatedAt": "2026-06-29T10:45:31.566Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a424ccb43985545cd94ac81",
+    "name": "React Masterclass",
+    "level": "Intermediate",
+    "description": "Deep dive into React and its ecosystem",
+    "batches": [
+      {
+        "batchName": "Batch A - Weekend",
+        "_id": "6a424ccb43985545cd94ac82",
+        "createdAt": "2026-06-29T10:45:31.565Z",
+        "updatedAt": "2026-06-29T10:45:31.565Z"
+      }
+    ],
+    "createdAt": "2026-06-29T10:45:31.566Z",
+    "updatedAt": "2026-06-29T10:45:31.566Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a424ccb43985545cd94ac83",
+    "name": "Node.js Advanced",
+    "level": "Advanced",
+    "description": "Backend development with Node.js and MongoDB",
+    "batches": [
+      {
+        "batchName": "Batch A - Weekday",
+        "_id": "6a424ccb43985545cd94ac84",
+        "createdAt": "2026-06-29T10:45:31.565Z",
+        "updatedAt": "2026-06-29T10:45:31.565Z"
+      }
+    ],
+    "createdAt": "2026-06-29T10:45:31.566Z",
+    "updatedAt": "2026-06-29T10:45:31.566Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a426adbb6dc00f8d8dc47c0",
+    "name": "Aws ",
+    "level": "Beginner",
+    "description": "More than 20 aws services will be explained along with practical demonstration ",
+    "image": null,
+    "batches": [
+      {
+        "batchName": "Batch A - morning",
+        "_id": "6a426b00b6dc00f8d8dc47c8",
+        "createdAt": "2026-06-29T12:54:24.516Z",
+        "updatedAt": "2026-06-29T12:54:24.516Z"
+      },
+      {
+        "batchName": "Batch B - evening",
+        "_id": "6a426b13b6dc00f8d8dc47cc",
+        "createdAt": "2026-06-29T12:54:43.875Z",
+        "updatedAt": "2026-06-29T12:54:43.875Z"
+      }
+    ],
+    "createdAt": "2026-06-29T12:53:47.436Z",
+    "updatedAt": "2026-06-29T12:54:43.875Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a429ab9362bc4bc3bbf8831",
+    "name": "frontend",
+    "level": "Beginner",
+    "description": "html,css,javascript",
+    "image": null,
+    "batches": [
+      {
+        "batchName": "Batch - A",
+        "_id": "6a429ae3362bc4bc3bbf883b",
+        "createdAt": "2026-06-29T16:18:43.890Z",
+        "updatedAt": "2026-06-29T16:18:43.890Z"
+      },
+      {
+        "batchName": "Batch - B",
+        "_id": "6a429aee362bc4bc3bbf883f",
+        "createdAt": "2026-06-29T16:18:54.148Z",
+        "updatedAt": "2026-06-29T16:18:54.148Z"
+      }
+    ],
+    "createdAt": "2026-06-29T16:18:01.549Z",
+    "updatedAt": "2026-06-29T16:18:54.148Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a429d31362bc4bc3bbf88d2",
+    "name": "cloud computing",
+    "level": "Beginner",
+    "description": "all the services of aws",
+    "image": null,
+    "batches": [
+      {
+        "batchName": "Batch - A",
+        "_id": "6a429d4f362bc4bc3bbf88de",
+        "createdAt": "2026-06-29T16:29:03.406Z",
+        "updatedAt": "2026-06-29T16:29:03.406Z"
+      },
+      {
+        "batchName": "Batch - B",
+        "_id": "6a429d58362bc4bc3bbf88e2",
+        "createdAt": "2026-06-29T16:29:12.013Z",
+        "updatedAt": "2026-06-29T16:29:12.013Z"
+      }
+    ],
+    "createdAt": "2026-06-29T16:28:33.670Z",
+    "updatedAt": "2026-06-29T16:29:12.013Z",
+    "__v": 0
+  }
+]

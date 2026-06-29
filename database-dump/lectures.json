@@ -1,0 +1,52 @@
+[
+  {
+    "_id": "6a424d84f4ccbe029db9800f",
+    "courseId": "6a424ccb43985545cd94ac7e",
+    "batchId": "6a424ccb43985545cd94ac7f",
+    "instructorId": "6a424ccb43985545cd94ac7b",
+    "lectureDate": "2026-06-30T00:00:00.000Z",
+    "createdAt": "2026-06-29T10:48:36.419Z",
+    "updatedAt": "2026-06-29T10:48:36.419Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a426957b6dc00f8d8dc47a0",
+    "courseId": "6a424ccb43985545cd94ac7e",
+    "batchId": "6a424ccb43985545cd94ac80",
+    "instructorId": "6a4268fab6dc00f8d8dc4785",
+    "lectureDate": "2026-07-01T00:00:00.000Z",
+    "createdAt": "2026-06-29T12:47:19.150Z",
+    "updatedAt": "2026-06-29T12:47:19.150Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a429b34362bc4bc3bbf886a",
+    "courseId": "6a429ab9362bc4bc3bbf8831",
+    "batchId": "6a429aee362bc4bc3bbf883f",
+    "instructorId": "6a429a67362bc4bc3bbf8827",
+    "lectureDate": "2026-07-02T00:00:00.000Z",
+    "createdAt": "2026-06-29T16:20:04.488Z",
+    "updatedAt": "2026-06-29T16:20:04.488Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a429da5362bc4bc3bbf8903",
+    "courseId": "6a429d31362bc4bc3bbf88d2",
+    "batchId": "6a429d58362bc4bc3bbf88e2",
+    "instructorId": "6a429cea362bc4bc3bbf88c6",
+    "lectureDate": "2026-07-03T00:00:00.000Z",
+    "createdAt": "2026-06-29T16:30:29.926Z",
+    "updatedAt": "2026-06-29T16:30:29.926Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a429e54362bc4bc3bbf8949",
+    "courseId": "6a424ccb43985545cd94ac7e",
+    "batchId": "6a424ccb43985545cd94ac7f",
+    "instructorId": "6a429cea362bc4bc3bbf88c6",
+    "lectureDate": "2026-07-04T00:00:00.000Z",
+    "createdAt": "2026-06-29T16:33:24.611Z",
+    "updatedAt": "2026-06-29T16:33:24.611Z",
+    "__v": 0
+  }
+]
