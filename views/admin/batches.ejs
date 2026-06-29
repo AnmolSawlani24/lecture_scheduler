@@ -1,0 +1,47 @@
+<%- include('_header') %>
+
+<% if (success && success.length) { %><div class="alert alert-success"><%= success %></div><% } %>
+<% if (error && error.length) { %><div class="alert alert-error"><%= error %></div><% } %>
+
+<div class="mb-20">
+  <a href="/admin/courses" class="btn btn-outline">← Back to Courses</a>
+</div>
+
+<div class="two-col">
+  <div class="card">
+    <div class="card-header"><h3>Add Batch to "<%= course.name %>"</h3></div>
+    <form action="/admin/courses/<%= course._id %>/batches/add" method="POST">
+      <div class="form-group">
+        <label>Batch Name</label>
+        <input type="text" name="batchName" placeholder="e.g. Batch A - Morning" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-full">Add Batch</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><h3>Batches (<%= course.batches.length %>)</h3></div>
+    <% if (course.batches.length === 0) { %>
+      <div class="empty-state">No batches yet. Add one!</div>
+    <% } else { %>
+    <table class="table">
+      <thead><tr><th>#</th><th>Batch Name</th><th>Action</th></tr></thead>
+      <tbody>
+        <% course.batches.forEach((b, i) => { %>
+        <tr>
+          <td><%= i + 1 %></td>
+          <td><%= b.batchName %></td>
+          <td>
+            <form action="/admin/courses/<%= course._id %>/batches/delete/<%= b._id %>" method="POST" onsubmit="return confirm('Delete this batch?')">
+              <button class="btn btn-sm btn-danger">Delete</button>
+            </form>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <% } %>
+  </div>
+</div>
+
+<%- include('_footer') %>

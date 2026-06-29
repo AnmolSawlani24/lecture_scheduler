@@ -1,0 +1,94 @@
+<%- include('_header') %>
+
+<% if (success && success.length) { %><div class="alert alert-success"><%= success %></div><% } %>
+<% if (error && error.length) { %><div class="alert alert-error"><%= error %></div><% } %>
+
+<div class="two-col">
+  <!-- Assign Form -->
+  <div class="card">
+    <div class="card-header"><h3>Assign Lecture</h3></div>
+    <form action="/admin/lectures/assign" method="POST" id="assignForm">
+      <div class="form-group">
+        <label>Select Course</label>
+        <select name="courseId" id="courseSelect" required onchange="loadBatches()">
+          <option value="">-- Select Course --</option>
+          <% courses.forEach(c => { %>
+            <option value="<%= c._id %>" data-batches='<%- JSON.stringify(c.batches) %>'>
+              <%= c.name %>
+            </option>
+          <% }) %>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Select Batch</label>
+        <select name="batchId" id="batchSelect" required>
+          <option value="">-- Select Course First --</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Select Instructor</label>
+        <select name="instructorId" required>
+          <option value="">-- Select Instructor --</option>
+          <% instructors.forEach(inst => { %>
+            <option value="<%= inst._id %>"><%= inst.name %> (<%= inst.email %>)</option>
+          <% }) %>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Lecture Date</label>
+        <input type="date" name="lectureDate" required min="<%= new Date().toISOString().split('T')[0] %>">
+      </div>
+      <button type="submit" class="btn btn-primary btn-full">Assign Lecture</button>
+    </form>
+  </div>
+
+  <!-- Lectures List -->
+  <div class="card">
+    <div class="card-header"><h3>All Assigned Lectures (<%= lectures.length %>)</h3></div>
+    <% if (lectures.length === 0) { %>
+      <div class="empty-state">No lectures assigned yet.</div>
+    <% } else { %>
+    <div class="table-scroll">
+    <table class="table">
+      <thead>
+        <tr><th>Course</th><th>Batch</th><th>Instructor</th><th>Date</th><th></th></tr>
+      </thead>
+      <tbody>
+        <% lectures.forEach(l => { %>
+        <tr>
+          <td><%= l.courseName %></td>
+          <td><%= l.batchName %></td>
+          <td><%= l.instructorId?.name %></td>
+          <td><%= new Date(l.lectureDate).toDateString() %></td>
+          <td>
+            <form action="/admin/lectures/delete/<%= l._id %>" method="POST" onsubmit="return confirm('Remove this lecture?')">
+              <button class="btn btn-sm btn-danger">✕</button>
+            </form>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    </div>
+    <% } %>
+  </div>
+</div>
+
+<script>
+function loadBatches() {
+  const sel = document.getElementById('courseSelect');
+  const opt = sel.options[sel.selectedIndex];
+  const batchSel = document.getElementById('batchSelect');
+  batchSel.innerHTML = '<option value="">-- Select Batch --</option>';
+  if (!opt.value) return;
+  const batches = JSON.parse(opt.dataset.batches || '[]');
+  batches.forEach(b => {
+    const o = document.createElement('option');
+    o.value = b._id;
+    o.textContent = b.batchName;
+    batchSel.appendChild(o);
+  });
+}
+</script>
+
+<%- include('_footer') %>

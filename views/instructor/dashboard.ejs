@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Lectures - Ideamagix LMS</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="app-body">
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <h2>idea<span>magix</span></h2>
+      <small>Instructor Panel</small>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="/instructor/dashboard" class="nav-item active">
+        <span>📅</span> My Lectures
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <div class="avatar"><%= user.name[0] %></div>
+        <div>
+          <div class="user-name"><%= user.name %></div>
+          <div class="user-role">Instructor</div>
+        </div>
+      </div>
+      <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="topbar">
+      <h1 class="page-title">My Assigned Lectures</h1>
+    </div>
+    <div class="content-body">
+
+      <% if (success && success.length) { %><div class="alert alert-success"><%= success %></div><% } %>
+      <% if (error && error.length) { %><div class="alert alert-error"><%= error %></div><% } %>
+
+      <% if (lectures.length === 0) { %>
+        <div class="card">
+          <div class="empty-state">
+            <p>🎉 No lectures assigned yet. Check back later!</p>
+          </div>
+        </div>
+      <% } else { %>
+        <div class="lecture-grid">
+          <% lectures.forEach(l => { %>
+          <div class="lecture-card">
+            <% if (l.courseId?.image) { %>
+              <img src="<%= l.courseId.image %>" class="lecture-img" alt="">
+            <% } else { %>
+              <div class="lecture-img-placeholder">📚</div>
+            <% } %>
+            <div class="lecture-card-body">
+              <div class="lecture-date">📅 <%= new Date(l.lectureDate).toDateString() %></div>
+              <h3><%= l.courseId?.name %></h3>
+              <span class="badge badge-<%= l.courseId?.level?.toLowerCase() %>"><%= l.courseId?.level %></span>
+              <p><%= l.courseId?.description || '' %></p>
+              <div class="lecture-batch">🗂 <%= l.batchName %></div>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+      <% } %>
+
+    </div>
+  </main>
+</div>
+</body>
+</html>

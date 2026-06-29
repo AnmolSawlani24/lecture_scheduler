@@ -1,0 +1,55 @@
+<%- include('_header') %>
+
+<% if (success && success.length) { %><div class="alert alert-success"><%= success %></div><% } %>
+<% if (error && error.length) { %><div class="alert alert-error"><%= error %></div><% } %>
+
+<div class="stats-grid">
+  <div class="stat-card">
+    <div class="stat-icon">👨‍🏫</div>
+    <div class="stat-info">
+      <h3><%= stats.instructors %></h3>
+      <p>Instructors</p>
+    </div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon">📚</div>
+    <div class="stat-info">
+      <h3><%= stats.courses %></h3>
+      <p>Courses</p>
+    </div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon">📅</div>
+    <div class="stat-info">
+      <h3><%= stats.lectures %></h3>
+      <p>Lectures Assigned</p>
+    </div>
+  </div>
+</div>
+
+<div class="card mt-20">
+  <div class="card-header">
+    <h3>Upcoming Lectures</h3>
+    <a href="/admin/lectures" class="btn btn-sm btn-primary">Assign New</a>
+  </div>
+  <% if (recentLectures.length === 0) { %>
+    <div class="empty-state">No lectures assigned yet. <a href="/admin/lectures">Assign one →</a></div>
+  <% } else { %>
+  <table class="table">
+    <thead>
+      <tr><th>Course</th><th>Instructor</th><th>Date</th></tr>
+    </thead>
+    <tbody>
+      <% recentLectures.forEach(l => { %>
+      <tr>
+        <td><%= l.courseId?.name || 'N/A' %></td>
+        <td><%= l.instructorId?.name || 'N/A' %></td>
+        <td><%= new Date(l.lectureDate).toDateString() %></td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  <% } %>
+</div>
+
+<%- include('_footer') %>
